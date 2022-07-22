@@ -100,7 +100,7 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2019 to 2021</BioYear>
-          It Support of Giant Ekstra at Palembang 
+          IT Support of Giant Ekstra at Palembang 
         </BioSection>
         <BioSection>
           <BioYear>2022 to present</BioYear>
@@ -114,14 +114,11 @@ const Home = () => (
         </Heading>
         <Paragraph>
           Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
+          <Link href="https://www.instagram.com/tama_z30" target="_blank">
             Drawing
           </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
+          ,Photography
+          , Machine Learning
         </Paragraph>
       </Section>
 

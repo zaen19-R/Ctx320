@@ -15,7 +15,7 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 1]} gap={6}>
         <Section>
           <WorkGridItem id="WNR" title="Work Not Ready" thumbnail={Banner_Not_Found}>
-            I m Sory. My Work on Progress, Thank you.
+            I&apos;m Sorry. My Work on Progress, Thank you.
           </WorkGridItem>
         </Section>
       </SimpleGrid>
