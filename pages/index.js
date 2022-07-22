@@ -91,7 +91,7 @@ const Home = () => (
       </Section>
 
       <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
+        <Heading as="h3" variant="section-title" mt={5}>
           Bio
         </Heading>
         <BioSection>
