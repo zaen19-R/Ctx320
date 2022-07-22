@@ -75,8 +75,8 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
+          Rozandi Hikmah is a freelance and a full-stack developer based in Palembang with a
+          passion for building digital services/stuff. He has a knack
           for all things launching products, from planning and designing all the
           way to solving real-life problems with code. When not online, he loves
           hanging out with his camera.
@@ -103,7 +103,7 @@ const Home = () => (
           It Support of Giant Ekstra at Palembang 
         </BioSection>
         <BioSection>
-          <BioYear>2017 to present</BioYear>
+          <BioYear>2022 to present</BioYear>
           Working as a freelancer
         </BioSection>
       </Section>
