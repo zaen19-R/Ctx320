@@ -15,7 +15,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoInstagram } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoInstagram } from 'react-icons/io5'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -138,6 +138,17 @@ const Home = () => (
                 leftIcon={<IoLogoInstagram />}
               >
                 @tama_z30
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://github.com/zaen19-R" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoGithub />}
+              >
+                Rozandi Hikmah
               </Button>
             </Link>
           </ListItem>
