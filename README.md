@@ -1,7 +1,5 @@
 # Rozandi Hikmah [ctx320 Homepage]
 
-[https://www.craftz.dog/](https://www.craftz.dog/)
-
 ## Stack
 
 - [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
