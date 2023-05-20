@@ -15,7 +15,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoGithub, IoLogoInstagram } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from 'react-icons/io5'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -99,12 +99,16 @@ const Home = () => (
           Born in Palembang, Indonesia.
         </BioSection>
         <BioSection>
+          <BioYear>2015 to 2019</BioYear>
+          Tax Staff of PT Adelindo at Palembang 
+        </BioSection>
+        <BioSection>
           <BioYear>2019 to 2021</BioYear>
           IT Support of Giant Ekstra at Palembang 
         </BioSection>
         <BioSection>
           <BioYear>2022 to present</BioYear>
-          Working as a freelancer
+          Assisten Supervisor of MR DIY Indonesia
         </BioSection>
       </Section>
 
@@ -114,7 +118,7 @@ const Home = () => (
         </Heading>
         <Paragraph>
           Art, Music,{' '}
-          <Link href="https://www.instagram.com/tama_z30" target="_blank">
+          <Link href="https://www.instagram.com/tama_z30" target="_blank" textColor={'white'}>
             Drawing
           </Link>
           ,Photography
@@ -147,6 +151,16 @@ const Home = () => (
               >
                 Rozandi Hikmah
               </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href='https://www.linkedin.com/in/rozandi-hikmah/' target='_blank'>
+            <Button
+            variant='ghost'
+            colorScheme='teal'
+            leftIcon={<IoLogoLinkedin/>}>
+              Rozandi Hikmah
+            </Button>
             </Link>
           </ListItem>
         </List>

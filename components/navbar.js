@@ -76,6 +76,9 @@ const Navbar = props => {
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
+          <LinkItem href="/certificate" path={path}>
+            Certificate
+          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
