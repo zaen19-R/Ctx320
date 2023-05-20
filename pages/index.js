@@ -104,7 +104,11 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2019 to 2021</BioYear>
-          IT Support of Giant Ekstra at Palembang 
+          IT Support of PT Hero Supermarket Tbk at Palembang 
+        </BioSection>
+        <BioSection>
+          <BioYear>2021 to 2022</BioYear>
+          Sales Executive of PT Home Center Indonesia at Palembang 
         </BioSection>
         <BioSection>
           <BioYear>2022 to present</BioYear>
