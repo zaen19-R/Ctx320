@@ -29,7 +29,7 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
-        <Image src='/images/Leader_Board.png' alt='LeaderBoard' margin={5} rounded={10}/>
+        <Image src='/images/Leader_Board.png' alt='LeaderBoard' mb='3' rounded={10} />
         {children}
 
         <Footer />
