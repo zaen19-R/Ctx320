@@ -35,7 +35,7 @@ const AutoLoadPopup = () => {
               height={150}
               rounded={'100%'}
             />
-            <Box>
+            <Box color="white">
               <Heading as="h1">Welcome</Heading>
               <Heading as="h4" variant="body-paraf">
                 to Ctx320
