@@ -32,10 +32,6 @@ const ProfileImage = chakra(Image, {
 const Home = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
 
-  const handleOpenPopup = () => {
-    setIsPopupOpen(true)
-  }
-
   const handleClosePopup = () => {
     setIsPopupOpen(false)
   }
