@@ -1,0 +1,13 @@
+{
+  "visitor": {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "phone": "123-456-7890",
+    "visit_date": "2023-06-13",
+    "purpose": "Meeting",
+    "notes": "Please inform the reception upon arrival."
+  },
+  "guest":{
+    "date":""
+  }
+}
