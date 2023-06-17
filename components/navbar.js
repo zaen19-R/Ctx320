@@ -16,7 +16,6 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import WhatsAppButton from './whatsapp_util'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
