@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
+import WhatsAppButton from './whatsapp_util'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -81,7 +82,7 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align="right">
+        <Box flex={2} align="right">
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -110,6 +111,7 @@ const Navbar = props => {
           </Box>
         </Box>
       </Container>
+      {/* <WhatsAppButton/> */}
     </Box>
   )
 }
