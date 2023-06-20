@@ -14,8 +14,39 @@ const AutoLoadPopup = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  const handleClose = () => {
+  // const handleClose = () => {
+  //   setIsOpen(false)
+  //   fetch('/api/increaseVisitiorCount', { method: 'POST' })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log('Jumlah pengunjung ditambahkan : ', data.visitorCount)
+  //     })
+  //     .catch(error => {
+  //       console.error('terjadi kesalahan :', error)
+  //     })
+  // }
+  const handleClose = async () => {
     setIsOpen(false)
+
+    try {
+      // Make a POST request to the API endpoint to increase the visitor count
+      const response = await fetch('/api/increaseVisitorCount', {
+        method: 'POST'
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        const visitorCount = data.visitorCount
+        console.log('Visitor count:', visitorCount)
+        // Use the updated visitor count for further purposes
+      } else {
+        // Handle the response error
+        console.log('Error:', response.statusText)
+      }
+    } catch (error) {
+      // Handle the request error
+      console.log('Error:', error.message)
+    }
   }
 
   return (

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import NavBar from '../navbar'
 import { Box, Container, Flex } from '@chakra-ui/react'
 import Footer from '../footer'
-import {Image} from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
 import WhatsAppButton from '../whatsapp_util'
 
 const Main = ({ children, router }) => {
@@ -29,21 +29,22 @@ const Main = ({ children, router }) => {
 
       <NavBar path={router.asPath} />
       <Container maxW="container.md" pt={14}>
-        <Image src='/images/Leader_Board.png' alt='LeaderBoard' mb='3' rounded={10} />
+        <Image
+          src="/images/Leader_Board.png"
+          alt="LeaderBoard"
+          mb="3"
+          rounded={10}
+        />
         {children}
 
         <Footer />
-        <Flex
-          position="fixed"
-          bottom={4}
-          right={6}
-          justify="flex-end"
-          align="flex-end"
-        >
-          <WhatsAppButton phoneNumber="6289503215816" message="Halo! Saya mengunjungi halaman Anda dan ingin berbicara lebih lanjut." />
+        <Flex position="fixed" bottom={2} right={16} align="flex-end">
+          <WhatsAppButton
+            phoneNumber="6289503215816"
+            message="Halo! Saya mengunjungi halaman Anda dan ingin berbicara lebih lanjut."
+          />
         </Flex>
       </Container>
-
     </Box>
   )
 }

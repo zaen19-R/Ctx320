@@ -8,7 +8,10 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra
+  chakra,
+  Flex,
+  Grid,
+  GridItem
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -19,11 +22,14 @@ import {
   IoLogoGithub,
   IoLogoInstagram,
   IoLogoLinkedin,
+  IoLogoPinterest,
   IoLogoYoutube
 } from 'react-icons/io5'
+import { BiShow } from 'react-icons/bi'
 import Image from 'next/image'
 import { useState } from 'react'
 import Popup from '../components/Popup.js'
+import VisitorCount from '../components/visitoview.js'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -57,6 +63,9 @@ const Home = () => {
               Rozandi Hikmah
             </Heading>
             <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+            <Flex>
+              <VisitorCount />
+            </Flex>
           </Box>
           <Box
             flexShrink={0}
@@ -136,15 +145,7 @@ const Home = () => {
             I ♥
           </Heading>
           <Paragraph>
-            Art, Music,{' '}
-            <Link
-              href="https://www.instagram.com/tama_z30"
-              target="_blank"
-              variant="baseStyle"
-            >
-              Drawing
-            </Link>
-            , Photography , Machine Learning
+            Art, Music, Drawing, Photography , Machine Learning
           </Paragraph>
         </Section>
 
@@ -152,55 +153,76 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             On the web
           </Heading>
-          <List>
-            <ListItem>
-              <Link href="https://www.instagram.com/tama_z30" target="_blank">
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<IoLogoInstagram />}
+          <Grid templateColumns="1fr auto">
+            <List>
+              <ListItem>
+                <Link href="https://www.instagram.com/tama_z30" target="_blank">
+                  <Button
+                    variant="ghost"
+                    colorScheme="teal"
+                    leftIcon={<IoLogoInstagram />}
+                  >
+                    Instagram
+                  </Button>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href="https://github.com/zaen19-R" target="_blank">
+                  <Button
+                    variant="ghost"
+                    colorScheme="teal"
+                    leftIcon={<IoLogoGithub />}
+                  >
+                    Github
+                  </Button>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  href="https://www.linkedin.com/in/rozandi-hikmah/"
+                  target="_blank"
                 >
-                  @tama_z30
-                </Button>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link href="https://github.com/zaen19-R" target="_blank">
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<IoLogoGithub />}
+                  <Button
+                    variant="ghost"
+                    colorScheme="teal"
+                    leftIcon={<IoLogoLinkedin />}
+                  >
+                    linkedin
+                  </Button>
+                </Link>
+              </ListItem>
+            </List>
+            <List>
+              <ListItem>
+                <Link
+                  href="https://www.youtube.com/@zandizoldyc"
+                  target="_blank"
                 >
-                  Rozandi Hikmah
-                </Button>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link
-                href="https://www.linkedin.com/in/rozandi-hikmah/"
-                target="_blank"
-              >
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<IoLogoLinkedin />}
+                  <Button
+                    variant="ghost"
+                    colorScheme="teal"
+                    leftIcon={<IoLogoYoutube />}
+                  >
+                    Youtube
+                  </Button>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  href="https://id.pinterest.com/zandi_zoldyc/"
+                  target="_blank"
                 >
-                  Rozandi Hikmah
-                </Button>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link href="https://www.youtube.com/@zandizoldyc" target="_blank">
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<IoLogoYoutube />}
-                >
-                  Zandi Zoldyc
-                </Button>
-              </Link>
-            </ListItem>
-          </List>
+                  <Button
+                    variant="ghost"
+                    colorScheme="teal"
+                    leftIcon={<IoLogoPinterest />}
+                  >
+                    Pinterst
+                  </Button>
+                </Link>
+              </ListItem>
+            </List>
+          </Grid>
           <Box align="center" my={4}>
             <NextLink href="/posts" passHref scroll={false}>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
