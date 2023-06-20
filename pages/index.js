@@ -10,8 +10,7 @@ import {
   useColorModeValue,
   chakra,
   Flex,
-  Grid,
-  GridItem
+  Grid
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -25,7 +24,6 @@ import {
   IoLogoPinterest,
   IoLogoYoutube
 } from 'react-icons/io5'
-import { BiShow } from 'react-icons/bi'
 import Image from 'next/image'
 import { useState } from 'react'
 import Popup from '../components/Popup.js'
