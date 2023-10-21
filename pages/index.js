@@ -25,8 +25,8 @@ import {
   IoLogoYoutube
 } from 'react-icons/io5'
 import Image from 'next/image'
-import { useState } from 'react'
-import Popup from '../components/Popup.js'
+// import { useState } from 'react'
+// import Popup from '../components/Popup.js'
 import VisitorCount from '../components/visitoview.js'
 
 const ProfileImage = chakra(Image, {
@@ -34,16 +34,16 @@ const ProfileImage = chakra(Image, {
 })
 
 const Home = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  // const [isPopupOpen, setIsPopupOpen] = useState(false)
 
-  const handleClosePopup = () => {
-    setIsPopupOpen(false)
-  }
+  // const handleClosePopup = () => {
+  //   setIsPopupOpen(false)
+  // }
 
   return (
     <Layout>
       <Container>
-        <Popup isOpen={isPopupOpen} onClose={handleClosePopup} />
+        {/* <Popup isOpen={isPopupOpen} onClose={handleClosePopup} /> */}
         <Box
           borderRadius="lg"
           mb={6}
@@ -60,7 +60,7 @@ const Home = () => {
             <Heading as="h2" variant="page-title">
               Rozandi Hikmah
             </Heading>
-            <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+            <p>Digital Craftsman ( Artist / Developer / Designer / Retail )</p>
             <Flex>
               <VisitorCount />
             </Flex>
@@ -133,8 +133,16 @@ const Home = () => {
             Sales Executive of PT Home Center Indonesia at Palembang
           </BioSection>
           <BioSection>
-            <BioYear>2022 to present</BioYear>
+            <BioYear>2022 to 2023</BioYear>
             Assisten Supervisor of MR DIY Indonesia
+          </BioSection>
+          <BioSection>
+            <BioYear>2023 to 2023</BioYear>
+            Store Supervisor of MR DIY Indonesia
+          </BioSection>
+          <BioSection>
+            <BioYear>2023 to Present</BioYear>
+            Team Support Supervisor of MR DIY Indonesia
           </BioSection>
         </Section>
 
