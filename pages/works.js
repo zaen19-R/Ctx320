@@ -2,8 +2,8 @@ import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-
-import Banner_Not_Found from '../public/images/banner_Not_Found.jpg'
+// import Banner_Not_Found from '../public/images/banner_Not_Found.jpg'
+import New_thumnail from '../public/images/MONSTER.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -14,7 +14,12 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 1]} gap={6}>
         <Section>
-          <WorkGridItem id="WNR" title="Work Not Ready" thumbnail={Banner_Not_Found}>
+          <WorkGridItem
+            // id="WNR"
+            title="Work Not Ready"
+            // thumbnail={Banner_Not_Found}
+            thumbnail={New_thumnail}
+          >
             I&apos;m Sorry. My Work on Progress, Thank you.
           </WorkGridItem>
         </Section>

@@ -29,12 +29,13 @@ const Main = ({ children, router }) => {
 
       <NavBar path={router.asPath} />
       <Container maxW="container.md" pt={14}>
-        <Image
-          src="/images/Leader_Board.png"
+        {/* <Image
+          src="/images/BACKGROUND_BANNER_MONSTER_720X200.jpg"
           alt="LeaderBoard"
-          mb="3"
+          mt="4"
+          mb="4"
           rounded={10}
-        />
+        /> */}
         {children}
 
         <Footer />

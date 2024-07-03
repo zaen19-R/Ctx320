@@ -10,7 +10,8 @@ import {
   useColorModeValue,
   chakra,
   Flex,
-  Grid
+  Grid,
+  SimpleGrid
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -25,23 +26,31 @@ import {
   IoLogoYoutube
 } from 'react-icons/io5'
 import Image from 'next/image'
-// import { useState } from 'react'
-// import Popup from '../components/Popup.js'
+import { useState } from 'react'
+import Popup from '../components/Popup.js'
 import VisitorCount from '../components/visitoview.js'
+import React from 'react'
+import New_Thumbnail from '../public/images/MONSTER.png'
+import { WorkGridItem } from '../components/grid-item'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
 const Home = () => {
-  // const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
-  // const handleClosePopup = () => {
-  //   setIsPopupOpen(false)
-  // }
+  const handleClosePopup = () => {
+    setIsPopupOpen(false)
+  }
 
   return (
     <Layout>
+      <Container mt={2}>
+        <SimpleGrid columns={[1]}>
+          <WorkGridItem thumbnail={New_Thumbnail}></WorkGridItem>
+        </SimpleGrid>
+      </Container>
       <Container>
         {/* <Popup isOpen={isPopupOpen} onClose={handleClosePopup} /> */}
         <Box
@@ -57,10 +66,12 @@ const Home = () => {
 
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
-            <Heading as="h2" variant="page-title">
+            <Heading as="h3" variant="page-title">
               Rozandi Hikmah
             </Heading>
-            <p>Digital Craftsman ( Artist / Developer / Designer / Retail )</p>
+            <p as="h4">
+              Digital Craftsman ( Artist / Developer / Designer / Retail )
+            </p>
             <Flex>
               <VisitorCount />
             </Flex>
