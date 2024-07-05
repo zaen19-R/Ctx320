@@ -2,7 +2,7 @@ import Head from 'next/head'
 import NavBar from '../navbar'
 import { Box, Container, Flex } from '@chakra-ui/react'
 import Footer from '../footer'
-import { Image } from '@chakra-ui/react'
+// import { Image } from '@chakra-ui/react'
 import WhatsAppButton from '../whatsapp_util'
 
 const Main = ({ children, router }) => {

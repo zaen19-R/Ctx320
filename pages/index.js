@@ -26,8 +26,8 @@ import {
   IoLogoYoutube
 } from 'react-icons/io5'
 import Image from 'next/image'
-import { useState } from 'react'
-import Popup from '../components/Popup.js'
+// import { useState } from 'react'
+// import Popup from '../components/Popup.js'
 import VisitorCount from '../components/visitoview.js'
 import React from 'react'
 import New_Thumbnail from '../public/images/MONSTER.png'
@@ -38,11 +38,11 @@ const ProfileImage = chakra(Image, {
 })
 
 const Home = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  // const [isPopupOpen, setIsPopupOpen] = useState(false)
 
-  const handleClosePopup = () => {
-    setIsPopupOpen(false)
-  }
+  // const handleClosePopup = () => {
+  //   setIsPopupOpen(false)
+  // }
 
   return (
     <Layout>
