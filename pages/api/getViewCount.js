@@ -1,5 +1,6 @@
 // pages/api/increaseVisitorCount.js
-import { chmod, writeFile, readFile } from 'fs/promises'
+import { chmod, readFile } from 'fs/promises'
+// import { chmod, writeFile, readFile } from 'fs/promises'
 // import { promises as fs } from 'fs'
 
 export default async function handler(req, res) {
