@@ -1,16 +1,16 @@
 // pages/api/increaseVisitorCount.js
-import { chmod, readFile } from 'fs/promises'
-// import { chmod, writeFile, readFile } from 'fs/promises'
+// import { chmod, readFile } from 'fs/promises'
+import { chmod, writeFile, readFile } from 'fs/promises'
 // import { promises as fs } from 'fs'
 
 export default async function handler(req, res) {
   try {
-    // const filePath = '../pages/api/test.json'
+    const filePath = './pages/api/test.json'
     // const filePath = 'data/test.json'
     // const filePath = 'pages/api/test.json'
-    const filePath = '/api/test.json'
+    // const filePath = '../api/test.json'
     // const filePath = './pages/api/counter.json'
-    // const permissions = 0o600
+    const permissions = 0o600
 
     // Set the file permissions to read and write (owner only)
     await chmod(filePath, permissions)
@@ -23,8 +23,8 @@ export default async function handler(req, res) {
     // count++
 
     // Save the updated visitor count to the data file
-    // await writeFile(filePath, JSON.stringify({ count }), 'utf-8')
-    // count++
+    await writeFile(filePath, JSON.stringify({ count }), 'utf-8')
+    count++
     // Return the updated visitor count as the response
     res.status(200).json({ visitorCount: count })
   } catch (error) {

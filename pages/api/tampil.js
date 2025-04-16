@@ -1,3 +1,4 @@
+import { json } from 'express'
 import { promises as fs } from 'fs'
 
 export default async function handler(req, res) {
@@ -6,9 +7,9 @@ export default async function handler(req, res) {
       process.cwd() + 'pages/api/data.json',
       'utf8'
     )
-    const data = JSON.parse(file)
+    const data = json.parse(file)
 
-    res.status(200).JSON(data)
+    res.status(200).json(data)
   } else {
     res.status(404).send('Not Found')
   }

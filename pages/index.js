@@ -155,6 +155,14 @@ const Home = () => {
             <BioYear>2023 to Present</BioYear>
             Team Support Supervisor of MR DIY Indonesia
           </BioSection>
+          <BioSection>
+            <BioYear>2025 to Present</BioYear>
+            Founder Ctx320 | Indie Programing
+          </BioSection>
+          <BioSection>
+            <BioYear>2025 to Present</BioYear>
+            Interior and Outdor Art Design
+          </BioSection>
         </Section>
 
         <Section delay={0.3}>
