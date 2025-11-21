@@ -29,7 +29,6 @@ import Image from 'next/image'
 // import { useState } from 'react'
 // import Popup from '../components/Popup.js'
 import VisitorCount from '../components/visitoview.js'
-import React from 'react'
 import New_Thumbnail from '../public/images/MONSTER.png'
 import { WorkGridItem } from '../components/grid-item'
 
