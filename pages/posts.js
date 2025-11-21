@@ -13,12 +13,16 @@ const Posts = () => (
 
       <SimpleGrid columns={[1, 1, 1]} gap={6}>
         <Section>
-          <WorkGridItem id="WNR" title="Post Not Found" thumbnail={Banner_Not_Found}>
+          <WorkGridItem
+            id="WNR"
+            title="Post Not Found"
+            thumbnail={Banner_Not_Found}
+          >
             I&apos;m Sorry. Post Not Available Now
           </WorkGridItem>
         </Section>
       </SimpleGrid>
-      </Container>
+    </Container>
   </Layout>
 )
 
