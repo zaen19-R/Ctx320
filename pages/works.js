@@ -1,11 +1,4 @@
-import {
-  Container,
-  Heading,
-  SimpleGrid,
-  Box,
-  Grid,
-  GridItem
-} from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Link from 'next/link'
 import { Button } from '@chakra-ui/react'
 import { AddIcon } from '@chakra-ui/icons'
