@@ -1,20 +1,30 @@
 import { Container, Heading, Box, Center, Text } from '@chakra-ui/react'
 import { Button } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
+import clientPromise from '../lib/mongodb'
 
-const Tester = () => {
-  const [artikel, setArtikel] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [page, setPage] = useState(1)
-  const [limit, setLimit] = useState(5)
-  const [totalPages, setTotalPages] = useState(1)
-  const [totalDocs, setTotalDocs] = useState(0)
+const Tester = ({
+  initialArtikel = [],
+  initialPage = 1,
+  initialLimit = 5,
+  initialTotalPages = 1,
+  initialTotalDocs = 0
+}) => {
+  const [artikel, setArtikel] = useState(initialArtikel)
+  const [loading, setLoading] = useState(false)
+  const [page, setPage] = useState(initialPage)
+  const [limit, setLimit] = useState(initialLimit)
+  const [totalPages, setTotalPages] = useState(initialTotalPages)
+  const [totalDocs, setTotalDocs] = useState(initialTotalDocs)
 
   useEffect(() => {
     let mounted = true
-    setLoading(true)
 
+    // If current page/limit equals initial values, we already have data from server; no client fetch needed
+    if (page === initialPage && limit === initialLimit) return
+
+    setLoading(true)
     fetch(`/api/artikel?page=${page}&limit=${limit}`)
       .then(res => res.json())
       .then(data => {
@@ -42,11 +52,17 @@ const Tester = () => {
     return () => {
       mounted = false
     }
-  }, [page, limit])
+  }, [page, limit, initialPage, initialLimit])
 
-  const prevPage = () => setPage(p => Math.max(1, p - 1))
-  const nextPage = () => setPage(p => Math.min(totalPages, p + 1))
-  const goToPage = p => setPage(Math.max(1, Math.min(totalPages, p)))
+  const prevPage = useCallback(() => setPage(p => Math.max(1, p - 1)), [])
+  const nextPage = useCallback(
+    () => setPage(p => Math.min(totalPages, p + 1)),
+    [totalPages]
+  )
+  const goToPage = useCallback(
+    p => setPage(Math.max(1, Math.min(totalPages, p))),
+    [totalPages]
+  )
 
   return (
     <Layout title={'Tester'}>
@@ -121,7 +137,7 @@ const Tester = () => {
                     item._id ||
                     idx
                   }
-                  bgColor={'darkslateblue'}
+                  bgColor={'Teal'}
                   p={4}
                   margin={2}
                   padding={5}
@@ -178,4 +194,43 @@ const Tester = () => {
 }
 
 export default Tester
-export { getServerSideProps } from '../components/chakra'
+export async function getServerSideProps({ req, query }) {
+  const page = parseInt(query.page || '1', 10) || 1
+  const limit = Math.max(
+    1,
+    Math.min(100, parseInt(query.limit || '5', 10) || 5)
+  )
+
+  try {
+    const client = await clientPromise
+    const db = client.db('ctx320')
+    const collection = db.collection('Artikel')
+
+    const totalDocs = await collection.countDocuments()
+    const skip = (page - 1) * limit
+    const docs = await collection.find({}).skip(skip).limit(limit).toArray()
+
+    return {
+      props: {
+        initialArtikel: JSON.parse(JSON.stringify(docs)),
+        initialPage: page,
+        initialLimit: limit,
+        initialTotalPages: Math.max(1, Math.ceil(totalDocs / limit)),
+        initialTotalDocs: totalDocs,
+        cookies: req.headers.cookie ?? ''
+      }
+    }
+  } catch (e) {
+    console.error('getServerSideProps /tester error', e)
+    return {
+      props: {
+        initialArtikel: [],
+        initialPage: 1,
+        initialLimit: 5,
+        initialTotalPages: 1,
+        initialTotalDocs: 0,
+        cookies: req.headers.cookie ?? ''
+      }
+    }
+  }
+}

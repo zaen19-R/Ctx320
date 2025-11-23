@@ -31,7 +31,7 @@ const Main = ({ children, router }) => {
           <title>Ctx320 - Homepage</title>
         </Head>
 
-        <NavBar path={router.asPath} />
+        <NavBar path={router.route} />
         <Container maxW="container.md" pt={14}>
           {/* <Image
           src="/images/BACKGROUND_BANNER_MONSTER_720X200.jpg"
