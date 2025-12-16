@@ -13,13 +13,10 @@ const Main = ({ children, router }) => {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content="Rozandi Hikmah homepage" />
           <meta name="author" content="Rozandi Hikmah" />
-          <meta name="author" content="craftzdog" />
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           <meta name="twitter:title" content="Rozandi Hikmah" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@craftzdog" />
-          <meta name="twitter:creator" content="@craftzdog" />
           <meta
             name="twitter:image"
             content="https://www.craftz.dog/card.png"

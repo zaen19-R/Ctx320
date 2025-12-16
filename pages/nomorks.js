@@ -8,8 +8,6 @@ import {
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
-import New_thumnail from '../public/images/MONSTER.png'
 
 const Nomorks = () => (
   <Layout title="Works">
