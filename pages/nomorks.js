@@ -6,10 +6,10 @@ import {
   Button,
   Text
 } from '@chakra-ui/react'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
-import New_thumnail from '../public/images/works/new_thumbnail.png'
+import Layout from '@/components/layouts/article'
+import Section from '@/components/section'
+import { WorkGridItem } from '@/components/grid-item'
+// import New_thumnail from '@/public/images/works/new_thumbnail.png'
 
 const Nomorks = () => (
   <Layout title="Works">
@@ -41,7 +41,7 @@ const Nomorks = () => (
 
       <SimpleGrid columns={[1, 1, 1]} gap={6}>
         <Section>
-          <WorkGridItem title="Nomor Keep Stock" thumbnail={New_thumnail} />
+          <WorkGridItem title="Nomor Keep Stock" />
         </Section>
       </SimpleGrid>
 
