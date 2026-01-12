@@ -5,7 +5,6 @@ import {
   Box,
   Badge,
   Text,
-  Flex,
   Image,
   HStack
 } from '@chakra-ui/react'
@@ -14,7 +13,6 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { WorkGridItem } from '../components/grid-item'
 import Banner_Not_Found from '../public/images/banner_Not_Found.jpg'
-import No_Image from '../public/images/no-image.png'
 import { useState, useEffect } from 'react'
 
 const Posts = () => {
