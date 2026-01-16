@@ -115,7 +115,10 @@ const Home = () => {
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works" passHref scroll={false}>
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              <Button
+                rightIcon={<ChevronRightIcon />}
+                colorScheme={useColorModeValue('blue', 'teal')}
+              >
                 My portfolio
               </Button>
             </NextLink>
@@ -183,7 +186,7 @@ const Home = () => {
                 <Link href="https://www.instagram.com/tama_z30" target="_blank">
                   <Button
                     variant="ghost"
-                    colorScheme="teal"
+                    colorScheme={useColorModeValue('blue', 'teal')}
                     leftIcon={<IoLogoInstagram />}
                   >
                     Instagram
@@ -194,7 +197,7 @@ const Home = () => {
                 <Link href="https://github.com/zaen19-R" target="_blank">
                   <Button
                     variant="ghost"
-                    colorScheme="teal"
+                    colorScheme={useColorModeValue('blue', 'teal')}
                     leftIcon={<IoLogoGithub />}
                   >
                     Github
@@ -208,7 +211,7 @@ const Home = () => {
                 >
                   <Button
                     variant="ghost"
-                    colorScheme="teal"
+                    colorScheme={useColorModeValue('blue', 'teal')}
                     leftIcon={<IoLogoLinkedin />}
                   >
                     linkedin
@@ -224,7 +227,7 @@ const Home = () => {
                 >
                   <Button
                     variant="ghost"
-                    colorScheme="teal"
+                    colorScheme={useColorModeValue('blue', 'teal')}
                     leftIcon={<IoLogoYoutube />}
                   >
                     Youtube
@@ -238,7 +241,7 @@ const Home = () => {
                 >
                   <Button
                     variant="ghost"
-                    colorScheme="teal"
+                    colorScheme={useColorModeValue('blue', 'teal')}
                     leftIcon={<IoLogoPinterest />}
                   >
                     Pinterst
@@ -249,7 +252,10 @@ const Home = () => {
           </Grid>
           <Box align="center" my={4}>
             <NextLink href="/posts" passHref scroll={false}>
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              <Button
+                rightIcon={<ChevronRightIcon />}
+                colorScheme={useColorModeValue('blue', 'teal')}
+              >
                 Popular posts
               </Button>
             </NextLink>

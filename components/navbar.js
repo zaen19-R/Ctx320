@@ -12,7 +12,8 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
+  Button
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
@@ -89,6 +90,13 @@ const Navbar = props => {
 
         <Box flex={2} align="right">
           <ThemeToggleButton />
+          <Button
+            colorScheme={useColorModeValue('blue', 'teal')}
+            display={{ base: 'none', md: 'inline-flex' }}
+            marginLeft={2}
+          >
+            <NextLink href="/login">Login</NextLink>
+          </Button>
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
@@ -116,6 +124,9 @@ const Navbar = props => {
                 </NextLink>
                 <NextLink href="/tester" passHref>
                   <MenuItem as={Link}>Tester</MenuItem>
+                </NextLink>
+                <NextLink href="/login" passHref>
+                  <MenuItem as={Link}>Login</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>

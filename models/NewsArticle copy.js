@@ -121,5 +121,5 @@ NewsArticleSchema.index({
   isBreakingNews: 1
 })
 
-export default mongoose.models.NewsArticle ||
+export default mongoose.model.NewsArticle ||
   mongoose.model('NewsArticle', NewsArticleSchema)

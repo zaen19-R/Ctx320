@@ -39,8 +39,8 @@ const Posts = () => {
 
   return (
     <Layout title="Posts">
-      <Container maxW="container.xl">
-        <Heading as="h3" fontSize={20} mb={6}>
+      <Container>
+        <Heading as="h3" fontSize={20} mb={3} mt={3}>
           News Today
         </Heading>
 
@@ -67,21 +67,27 @@ const Posts = () => {
                     borderWidth="1px"
                     borderRadius="lg"
                     overflow="hidden"
-                    p={4}
+                    p={2}
                   >
                     <HStack>
                       <Box>
-                        <Image src="/images/no-image.png" boxSize="100px" />
+                        <Image src={article.images.thumbnail} boxSize="100px" />
                       </Box>
                       <Box maxH={'sm'} w={'80%'} h={'100px'}>
+                        <Heading as="h5" size="sm">
+                          {article.title}
+                        </Heading>
                         <Paragraph>{article.summary}</Paragraph>
-                        <Box display="flex" ml={4}>
+                        <Box display="flex" gap="1">
                           {article.isBreakingNews && (
                             <Badge colorScheme="red">Breaking</Badge>
                           )}
 
                           <Text fontSize="xs" color="gray.500">
                             {new Date(article.publishedAt).toLocaleDateString()}
+                          </Text>
+                          <Text fontSize="xs" color="gray.500">
+                            {article.author.name}
                           </Text>
                         </Box>
                       </Box>
